@@ -1,0 +1,18 @@
+<div *ngIf="resume" class="modal show d-block" tabindex="-1" style="background: rgba(0,0,0,0.6);">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{ resume.name }}'s Resume</h5>
+        <button type="button" class="btn-close" (click)="close.emit()"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Email:</strong> {{ resume.email }}</p>
+        <p><strong>Skills:</strong> {{ resume.skills }}</p>
+        <p><strong>File:</strong> {{ resume.filename }}</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" (click)="close.emit()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

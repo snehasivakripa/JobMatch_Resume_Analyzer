@@ -1,0 +1,12 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">📄 Resume ATS Dashboard</h2>
+
+  <app-upload-resume></app-upload-resume>
+  <app-search-resume (selectResume)="onResumeSelect($event)"></app-search-resume>
+  <app-resume-list (selectResume)="onResumeSelect($event)"></app-resume-list>
+
+  <app-resume-detail
+      [resume]="selectedResume"
+      (close)="onCloseDetail()">
+  </app-resume-detail>
+</div>
